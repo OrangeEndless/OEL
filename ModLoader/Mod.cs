@@ -10,9 +10,9 @@ namespace OrangeEndless
 {
 	public interface Mod
 	{
-		void Start ( );
+		Task Start ( );
 
-		void Stop ( DateTime DeadLine );
+		Task Stop ( DateTime DeadLine );
 
 
 	}
@@ -20,9 +20,9 @@ namespace OrangeEndless
 
 	public struct LoadedMod
 	{
-		public Action Start;
+		public Func<Task> Start;
 
-		public Action<DateTime> Stop;
+		public Func<DateTime , Task> Stop;
 
 		public string Name;
 

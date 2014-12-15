@@ -18,22 +18,25 @@ namespace OrangeEndless
 
 		List<string> ModFiles;
 
-		public List<Type> GetModList ( )
+		public async Task<List<Type>> GetModList ( )
 		{
-			List<Type> ListOfMod = new List<Type> ( );
-			foreach ( var fil in ModFiles )
-			{
-				var types = ( Assembly . Load ( fil ) ) . GetTypes ( );
-				foreach ( var typ in types )
+			return await Task . Run<List<Type>> ( ( ) =>
 				{
-					if ( typ . IsSubclassOf ( typeof ( Mod ) ) )
+					List<Type> ListOfMod = new List<Type> ( );
+					foreach ( var fil in ModFiles )
 					{
-						ListOfMod . Add ( typ );
+						var types = ( Assembly . LoadFrom ( fil ) ) . GetTypes ( );
+						foreach ( var typ in types )
+						{
+							if ( typ . IsSubclassOf ( typeof ( Mod ) ) )
+							{
+								ListOfMod . Add ( typ );
+							}
+						}
 					}
-				}
-			}
+					return ListOfMod;
+				} );
 
-			return ListOfMod;
 		}
 
 
@@ -50,8 +53,8 @@ namespace OrangeEndless
 					Introduction = Att . Introduction ,
 					ID = Att . ID ,
 					Demand = Att . Demand ,
-					Start =  ( ) => { LoadingMod . Start ( ); } ,
-					Stop = ( Deadline ) => { LoadingMod . Stop ( Deadline ); } ,
+					Start = async ( ) => { await LoadingMod . Start ( ); } ,
+					Stop = async ( Deadline ) => { await LoadingMod . Stop ( Deadline ); } ,
 				} );
 			}
 		}
@@ -64,19 +67,19 @@ namespace OrangeEndless
 
 		}
 
-		public void Start ( )
+		public async void Start ( )
 		{
 			foreach ( var item in ListOfMod )
 			{
-				item . Start ( );
+				await item . Start ( );
 			}
 		}
 
-		public void Stop ( DateTime Deadline )
+		public async void Stop ( DateTime Deadline )
 		{
 			foreach ( var item in ListOfMod )
 			{
-				item . Stop ( Deadline ) ;
+				await item . Stop ( Deadline );
 			}
 		}
 	}

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeEndless", "OrangeEndless\OrangeEndless.csproj", "{32E2F48E-C347-42EC-8D2F-117F9CB5938E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModLoader", "ModLoader\ModLoader.csproj", "{A7EC7EE2-0A96-4771-81E0-F92436C82818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreMod", "CoreMod\CoreMod.csproj", "{0D63FC9C-2459-4D58-BFCE-8BDE7228D5EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeEndless", "OrangeEndless\OrangeEndless.csproj", "{6C91DFD0-DED1-419B-84FD-0BC9B424BE62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{32E2F48E-C347-42EC-8D2F-117F9CB5938E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32E2F48E-C347-42EC-8D2F-117F9CB5938E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32E2F48E-C347-42EC-8D2F-117F9CB5938E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32E2F48E-C347-42EC-8D2F-117F9CB5938E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D63FC9C-2459-4D58-BFCE-8BDE7228D5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D63FC9C-2459-4D58-BFCE-8BDE7228D5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D63FC9C-2459-4D58-BFCE-8BDE7228D5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D63FC9C-2459-4D58-BFCE-8BDE7228D5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7EC7EE2-0A96-4771-81E0-F92436C82818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7EC7EE2-0A96-4771-81E0-F92436C82818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7EC7EE2-0A96-4771-81E0-F92436C82818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7EC7EE2-0A96-4771-81E0-F92436C82818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C91DFD0-DED1-419B-84FD-0BC9B424BE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C91DFD0-DED1-419B-84FD-0BC9B424BE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C91DFD0-DED1-419B-84FD-0BC9B424BE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C91DFD0-DED1-419B-84FD-0BC9B424BE62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
