@@ -12,7 +12,7 @@ namespace OrangeEndless
 	{
 		Task Start ( );
 
-		Task Stop ( DateTime DeadLine );
+		Task Stop (  );
 
 
 	}
@@ -22,7 +22,7 @@ namespace OrangeEndless
 	{
 		public Func<Task> Start;
 
-		public Func<DateTime , Task> Stop;
+		public Func< Task> Stop;
 
 		public string Name;
 

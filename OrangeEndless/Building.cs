@@ -2,6 +2,7 @@
 using System . Collections . Generic;
 using System . Linq;
 using System . Text;
+using System . Threading . Tasks;
 
 namespace CoreMod
 {
@@ -35,9 +36,15 @@ namespace CoreMod
 
 		public string Introduction { get; set; }
 
-		public async void Stop ( )
+		public async Task Stop ( )
 		{
 
 		}
+
+		public async static Task<Building> LoadBuilding(int key)
+		{
+
+		}
+
 	}
 }

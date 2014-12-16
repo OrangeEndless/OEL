@@ -33,7 +33,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Device" />
-    <Reference Include="System.Windows" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +41,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building.cs" />
+    <Compile Include="BuildingsIntroductionResourse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildingsIntroductionResourse.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingsNameResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildingsNameResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingsStartCPSResourse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildingsStartCPSResourse.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingsStartPriceResourse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildingsStartPriceResourse.resx</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,6 +69,24 @@
       <Project>{a7ec7ee2-0a96-4771-81e0-f92436c82818}</Project>
       <Name>ModLoader</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildingsIntroductionResourse.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BuildingsIntroductionResourse.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildingsNameResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BuildingsNameResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildingsStartCPSResourse.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BuildingsStartCPSResourse.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildingsStartPriceResourse.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BuildingsStartPriceResourse.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

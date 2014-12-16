@@ -22,12 +22,19 @@ namespace CoreMod
 
 		public async Task Start ( )
 		{
-
+			for ( int i = 0 ; i <= 11 ; i++ )
+			{
+				var building = await Building . LoadBuilding ( i );
+				ListOfBuilding . Add ( building );
+			}
 		}
 
-		public async Task Stop ( DateTime DeadLine )
+		public async Task Stop ( )
 		{
-
+			foreach ( var item in ListOfBuilding )
+			{
+				await item . Stop ( );
+			}
 		}
 
 		public async void Tick ( object sender , ElapsedEventArgs e )
@@ -38,10 +45,9 @@ namespace CoreMod
 				{
 					NumberOfOrange += item . CPS;
 				}
-
 			} );
-
-
+			await Task . Run ( ( ) => { } );
+			await Task . Run ( ( ) => { } );
 		}
 
 		public Main ( OrangeEndless . Core core )

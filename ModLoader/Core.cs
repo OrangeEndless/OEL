@@ -54,7 +54,7 @@ namespace OrangeEndless
 					ID = Att . ID ,
 					Demand = Att . Demand ,
 					Start = async ( ) => { await LoadingMod . Start ( ); } ,
-					Stop = async ( Deadline ) => { await LoadingMod . Stop ( Deadline ); } ,
+					Stop = async ( ) => { await LoadingMod . Stop ( ); } ,
 				} );
 			}
 		}
@@ -79,7 +79,7 @@ namespace OrangeEndless
 		{
 			foreach ( var item in ListOfMod )
 			{
-				await item . Stop ( Deadline );
+				await item . Stop ( );
 			}
 		}
 	}
