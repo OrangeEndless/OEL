@@ -117,37 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="I1" xml:space="preserve">
+  <data name="R1" xml:space="preserve">
     <value>鼠标的指针~不是C里面的那个~可以帮你点击那个写着“摇”的按钮</value>
   </data>
-  <data name="I10" xml:space="preserve">
+  <data name="R10" xml:space="preserve">
     <value>这绝不是一本仅仅包含爱意的小说，它还饱含着橘子</value>
   </data>
-  <data name="I11" xml:space="preserve">
+  <data name="R11" xml:space="preserve">
     <value>折射出橘子</value>
   </data>
-  <data name="I2" xml:space="preserve">
+  <data name="R2" xml:space="preserve">
     <value>香甜的橘子可以诱惑一些正在玩锑尔号的小学生来帮你摇树</value>
   </data>
-  <data name="I3" xml:space="preserve">
+  <data name="R3" xml:space="preserve">
     <value>农场里可以出产橘子~只是在冬天需要水结冰来拯救橘子们</value>
   </data>
-  <data name="I4" xml:space="preserve">
+  <data name="R4" xml:space="preserve">
     <value>这是专业生产橘子的工厂</value>
   </data>
-  <data name="I5" xml:space="preserve">
+  <data name="R5" xml:space="preserve">
     <value>矿井里面可以挖出还没有变成化石的橘子</value>
   </data>
-  <data name="I6" xml:space="preserve">
+  <data name="R6" xml:space="preserve">
     <value>Oh!这里有一个由橘子组成的星球！</value>
   </data>
-  <data name="I7" xml:space="preserve">
+  <data name="R7" xml:space="preserve">
     <value>祖传克隆橘子！！！</value>
   </data>
-  <data name="I8" xml:space="preserve">
+  <data name="R8" xml:space="preserve">
     <value>打开存放橘子的仓库的大门</value>
   </data>
-  <data name="I9" xml:space="preserve">
+  <data name="R9" xml:space="preserve">
     <value>带你重回橘子统治世界的时代</value>
   </data>
 </root>

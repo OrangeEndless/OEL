@@ -63,99 +63,99 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 鼠标的指针~不是C里面的那个~可以帮你点击那个写着“摇”的按钮 的本地化字符串。
         /// </summary>
-        internal static string I1 {
+        internal static string R1 {
             get {
-                return ResourceManager.GetString("I1", resourceCulture);
+                return ResourceManager.GetString("R1", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 这绝不是一本仅仅包含爱意的小说，它还饱含着橘子 的本地化字符串。
         /// </summary>
-        internal static string I10 {
+        internal static string R10 {
             get {
-                return ResourceManager.GetString("I10", resourceCulture);
+                return ResourceManager.GetString("R10", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 折射出橘子 的本地化字符串。
         /// </summary>
-        internal static string I11 {
+        internal static string R11 {
             get {
-                return ResourceManager.GetString("I11", resourceCulture);
+                return ResourceManager.GetString("R11", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 香甜的橘子可以诱惑一些正在玩锑尔号的小学生来帮你摇树 的本地化字符串。
         /// </summary>
-        internal static string I2 {
+        internal static string R2 {
             get {
-                return ResourceManager.GetString("I2", resourceCulture);
+                return ResourceManager.GetString("R2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 农场里可以出产橘子~只是在冬天需要水结冰来拯救橘子们 的本地化字符串。
         /// </summary>
-        internal static string I3 {
+        internal static string R3 {
             get {
-                return ResourceManager.GetString("I3", resourceCulture);
+                return ResourceManager.GetString("R3", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 这是专业生产橘子的工厂 的本地化字符串。
         /// </summary>
-        internal static string I4 {
+        internal static string R4 {
             get {
-                return ResourceManager.GetString("I4", resourceCulture);
+                return ResourceManager.GetString("R4", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 矿井里面可以挖出还没有变成化石的橘子 的本地化字符串。
         /// </summary>
-        internal static string I5 {
+        internal static string R5 {
             get {
-                return ResourceManager.GetString("I5", resourceCulture);
+                return ResourceManager.GetString("R5", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 Oh!这里有一个由橘子组成的星球！ 的本地化字符串。
         /// </summary>
-        internal static string I6 {
+        internal static string R6 {
             get {
-                return ResourceManager.GetString("I6", resourceCulture);
+                return ResourceManager.GetString("R6", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 祖传克隆橘子！！！ 的本地化字符串。
         /// </summary>
-        internal static string I7 {
+        internal static string R7 {
             get {
-                return ResourceManager.GetString("I7", resourceCulture);
+                return ResourceManager.GetString("R7", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 打开存放橘子的仓库的大门 的本地化字符串。
         /// </summary>
-        internal static string I8 {
+        internal static string R8 {
             get {
-                return ResourceManager.GetString("I8", resourceCulture);
+                return ResourceManager.GetString("R8", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 带你重回橘子统治世界的时代 的本地化字符串。
         /// </summary>
-        internal static string I9 {
+        internal static string R9 {
             get {
-                return ResourceManager.GetString("I9", resourceCulture);
+                return ResourceManager.GetString("R9", resourceCulture);
             }
         }
     }

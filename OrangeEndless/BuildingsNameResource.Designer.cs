@@ -63,99 +63,99 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 指针 的本地化字符串。
         /// </summary>
-        public static string T1 {
+        public static string R1 {
             get {
-                return ResourceManager.GetString("T1", resourceCulture);
+                return ResourceManager.GetString("R1", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 录梦机 的本地化字符串。
         /// </summary>
-        public static string T10 {
+        public static string R10 {
             get {
-                return ResourceManager.GetString("T10", resourceCulture);
+                return ResourceManager.GetString("R10", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 棱镜 的本地化字符串。
         /// </summary>
-        public static string T11 {
+        public static string R11 {
             get {
-                return ResourceManager.GetString("T11", resourceCulture);
+                return ResourceManager.GetString("R11", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 小学生 的本地化字符串。
         /// </summary>
-        public static string T2 {
+        public static string R2 {
             get {
-                return ResourceManager.GetString("T2", resourceCulture);
+                return ResourceManager.GetString("R2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 农场 的本地化字符串。
         /// </summary>
-        public static string T3 {
+        public static string R3 {
             get {
-                return ResourceManager.GetString("T3", resourceCulture);
+                return ResourceManager.GetString("R3", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 工厂 的本地化字符串。
         /// </summary>
-        public static string T4 {
+        public static string R4 {
             get {
-                return ResourceManager.GetString("T4", resourceCulture);
+                return ResourceManager.GetString("R4", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 矿井 的本地化字符串。
         /// </summary>
-        public static string T5 {
+        public static string R5 {
             get {
-                return ResourceManager.GetString("T5", resourceCulture);
+                return ResourceManager.GetString("R5", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 宇宙飞船 的本地化字符串。
         /// </summary>
-        public static string T6 {
+        public static string R6 {
             get {
-                return ResourceManager.GetString("T6", resourceCulture);
+                return ResourceManager.GetString("R6", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 生物实验室 的本地化字符串。
         /// </summary>
-        public static string T7 {
+        public static string R7 {
             get {
-                return ResourceManager.GetString("T7", resourceCulture);
+                return ResourceManager.GetString("R7", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 仓库大门 的本地化字符串。
         /// </summary>
-        public static string T8 {
+        public static string R8 {
             get {
-                return ResourceManager.GetString("T8", resourceCulture);
+                return ResourceManager.GetString("R8", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 时间机器 的本地化字符串。
         /// </summary>
-        public static string T9 {
+        public static string R9 {
             get {
-                return ResourceManager.GetString("T9", resourceCulture);
+                return ResourceManager.GetString("R9", resourceCulture);
             }
         }
     }

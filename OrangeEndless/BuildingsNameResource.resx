@@ -117,37 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="T1" xml:space="preserve">
+  <data name="R1" xml:space="preserve">
     <value>指针</value>
   </data>
-  <data name="T10" xml:space="preserve">
+  <data name="R10" xml:space="preserve">
     <value>录梦机</value>
   </data>
-  <data name="T11" xml:space="preserve">
+  <data name="R11" xml:space="preserve">
     <value>棱镜</value>
   </data>
-  <data name="T2" xml:space="preserve">
+  <data name="R2" xml:space="preserve">
     <value>小学生</value>
   </data>
-  <data name="T3" xml:space="preserve">
+  <data name="R3" xml:space="preserve">
     <value>农场</value>
   </data>
-  <data name="T4" xml:space="preserve">
+  <data name="R4" xml:space="preserve">
     <value>工厂</value>
   </data>
-  <data name="T5" xml:space="preserve">
+  <data name="R5" xml:space="preserve">
     <value>矿井</value>
   </data>
-  <data name="T6" xml:space="preserve">
+  <data name="R6" xml:space="preserve">
     <value>宇宙飞船</value>
   </data>
-  <data name="T7" xml:space="preserve">
+  <data name="R7" xml:space="preserve">
     <value>生物实验室</value>
   </data>
-  <data name="T8" xml:space="preserve">
+  <data name="R8" xml:space="preserve">
     <value>仓库大门</value>
   </data>
-  <data name="T9" xml:space="preserve">
+  <data name="R9" xml:space="preserve">
     <value>时间机器</value>
   </data>
 </root>

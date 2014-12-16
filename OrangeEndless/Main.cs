@@ -7,7 +7,7 @@ using System . Threading . Tasks;
 using System . Runtime . CompilerServices;
 using System . Timers;
 
-namespace CoreMod
+namespace OrangeEndless
 {
 	[OrangeEndless . Mod ( "Core" , "Wencey Wang" , "The Core Function For OrangeEndLess" , "00000001-0000-0000-0000-000000000001" , new string [ ] { } )]
 	public class Main : OrangeEndless . Mod

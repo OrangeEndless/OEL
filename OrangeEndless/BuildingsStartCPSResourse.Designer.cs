@@ -59,5 +59,104 @@ namespace OrangeEndless {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找类似 0.1 的本地化字符串。
+        /// </summary>
+        internal static string R1 {
+            get {
+                return ResourceManager.GetString("R1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 1000000 的本地化字符串。
+        /// </summary>
+        internal static string R10 {
+            get {
+                return ResourceManager.GetString("R10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 100000000 的本地化字符串。
+        /// </summary>
+        internal static string R11 {
+            get {
+                return ResourceManager.GetString("R11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 0.5 的本地化字符串。
+        /// </summary>
+        internal static string R2 {
+            get {
+                return ResourceManager.GetString("R2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 4 的本地化字符串。
+        /// </summary>
+        internal static string R3 {
+            get {
+                return ResourceManager.GetString("R3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 10 的本地化字符串。
+        /// </summary>
+        internal static string R4 {
+            get {
+                return ResourceManager.GetString("R4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 40 的本地化字符串。
+        /// </summary>
+        internal static string R5 {
+            get {
+                return ResourceManager.GetString("R5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 100 的本地化字符串。
+        /// </summary>
+        internal static string R6 {
+            get {
+                return ResourceManager.GetString("R6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 400 的本地化字符串。
+        /// </summary>
+        internal static string R7 {
+            get {
+                return ResourceManager.GetString("R7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 6000 的本地化字符串。
+        /// </summary>
+        internal static string R8 {
+            get {
+                return ResourceManager.GetString("R8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 100000 的本地化字符串。
+        /// </summary>
+        internal static string R9 {
+            get {
+                return ResourceManager.GetString("R9", resourceCulture);
+            }
+        }
     }
 }
