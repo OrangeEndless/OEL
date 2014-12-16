@@ -41,11 +41,11 @@ namespace OrangeEndless
 		}
 
 
-		public void LoadMod ( Collection<Type> ModToLoad )
+		public void LoadMod ( Collection<Type> modtoload )
 		{
-			if ( ModToLoad != null )
+			if ( modtoload != null )
 			{
-				foreach ( var typ in ModToLoad )
+				foreach ( var typ in modtoload )
 				{
 					IMod LoadingMod = Activator . CreateInstance ( typ , this ) as IMod;
 					ModAttribute Att = Attribute . GetCustomAttribute ( typ , typeof ( ModAttribute ) ) as ModAttribute;
@@ -54,10 +54,10 @@ namespace OrangeEndless
 						Name = Att . Name ,
 						Author = Att . Author ,
 						Introduction = Att . Introduction ,
-						ID = Att . Id ,
+						Id = Att . Id ,
 						Demand = Att . Demand ,
 						Start = async ( ) => { await LoadingMod . Start ( ); } ,
-						Stop = async ( ) => { await LoadingMod . Stop ( ); } ,
+						Suspend = async ( ) => { await LoadingMod . Suspend ( ); } ,
 					} );
 				}
 			}
@@ -83,7 +83,7 @@ namespace OrangeEndless
 		{
 			foreach ( var item in CollectionOfMod )
 			{
-				await item . Stop ( );
+				await item . Suspend ( );
 			}
 		}
 	}

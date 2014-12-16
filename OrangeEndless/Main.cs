@@ -32,11 +32,11 @@ namespace OrangeEndless
 			}
 		}
 
-		public async Task Stop ( )
+		public async Task Suspend ( )
 		{
 			foreach ( var item in ListOfBuilding )
 			{
-				await item . Stop ( );
+				await item . Suspend ( );
 			}
 		}
 
@@ -53,9 +53,10 @@ namespace OrangeEndless
 			await Task . Run ( ( ) => { } );
 		}
 
-		public Main ( OrangeEndless . Core core )
+		public Main (  Core core )
 		{
 			Core = core;
+			
 			Ticks = new Timer ( 1000 );
 			Ticks . AutoReset = true;
 			Ticks . Enabled = true;

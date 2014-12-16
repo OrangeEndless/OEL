@@ -36,7 +36,7 @@ namespace OrangeEndless
 
 		public string Introduction { get; set; }
 
-		public async Task Stop ( )
+		public async Task Suspend ( )
 		{
 
 		}
@@ -49,7 +49,7 @@ namespace OrangeEndless
 
 				Name = await Task . Run<string> ( ( ) => { return BuildingsNameResource . ResourceManager . GetString ( ID ); } ) ,
 				Introduction = await Task . Run<string> ( ( ) => { return BuildingsIntroductionResourse . ResourceManager . GetString ( ID ); } ) ,
-				StartCps = await Task . Run<decimal> ( ( ) => { return Convert . ToDecimal ( BuildingsStartCPSResourse . ResourceManager . GetString ( ID ) ); } ) ,
+				StartCps = await Task . Run<decimal> ( ( ) => { return Convert . ToDecimal ( BuildingsStartCpsResourse . ResourceManager . GetString ( ID ) ); } ) ,
 				StartPrice = await Task . Run<decimal> ( ( ) => { return Convert . ToDecimal ( BuildingsStartPriceResourse . ResourceManager . GetString ( ID ) ); } ) ,
 
 			};

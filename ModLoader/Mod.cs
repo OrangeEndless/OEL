@@ -13,17 +13,17 @@ namespace OrangeEndless
 	{
 		Task Start ( );
 
-		Task Stop ( );
+		Task Suspend ( );
 
 
 	}
 
 
-	public struct LoadedMod
+	public class LoadedMod
 	{
 		public Func<Task> Start { get; set; }
 
-		public Func<Task> Stop { get; set; }
+		public Func<Task> Suspend { get; set; }
 
 		public string Name { get; set; }
 
@@ -31,7 +31,7 @@ namespace OrangeEndless
 
 		public string Introduction { get; set; }
 
-		public Guid ID { get; set; }
+		public Guid Id { get; set; }
 
 		public Collection<Guid> Demand { get; set; }
 	}

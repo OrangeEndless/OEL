@@ -61,10 +61,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BuildingsNameResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="BuildingsStartCPSResourse.Designer.cs">
+    <Compile Include="BuildingsStartCpsResourse1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BuildingsStartCPSResourse.resx</DependentUpon>
+      <DependentUpon>BuildingsStartCpsResourse.resx</DependentUpon>
     </Compile>
     <Compile Include="BuildingsStartPriceResourse.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,9 +89,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>BuildingsNameResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuildingsStartCPSResourse.resx">
+    <EmbeddedResource Include="BuildingsStartCpsResourse.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>BuildingsStartCPSResourse.Designer.cs</LastGenOutput>
+      <LastGenOutput>BuildingsStartCpsResourse1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="BuildingsStartPriceResourse.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
