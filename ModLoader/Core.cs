@@ -8,13 +8,14 @@ using System . Threading;
 using System . Runtime . CompilerServices;
 using System . Runtime . InteropServices;
 using System . IO;
+using System . Collections . ObjectModel;
 
 namespace OrangeEndless
 {
 	public class Core
 	{
 
-		public List<LoadedMod> ListOfMod;
+		public Collection<LoadedMod> CollectionOfMod;
 
 		List<string> ModFiles;
 
@@ -22,46 +23,49 @@ namespace OrangeEndless
 		{
 			return await Task . Run<List<Type>> ( ( ) =>
 				{
-					List<Type> ListOfMod = new List<Type> ( );
+					List<Type> listofmod = new List<Type> ( );
 					foreach ( var fil in ModFiles )
 					{
 						var types = ( Assembly . LoadFrom ( fil ) ) . GetTypes ( );
 						foreach ( var typ in types )
 						{
-							if ( typ . IsSubclassOf ( typeof ( Mod ) ) )
+							if ( typ . IsSubclassOf ( typeof ( IMod ) ) )
 							{
-								ListOfMod . Add ( typ );
+								listofmod . Add ( typ );
 							}
 						}
 					}
-					return ListOfMod;
+					return listofmod;
 				} );
 
 		}
 
 
-		public void LoadMod ( List<Type> ModToLoad )
+		public void LoadMod ( Collection<Type> ModToLoad )
 		{
-			foreach ( var typ in ModToLoad )
+			if ( ModToLoad != null )
 			{
-				Mod LoadingMod = Activator . CreateInstance ( typ , this ) as Mod;
-				ModAttribute Att = Attribute . GetCustomAttribute ( typ , typeof ( ModAttribute ) ) as ModAttribute;
-				ListOfMod . Add ( new LoadedMod
+				foreach ( var typ in ModToLoad )
 				{
-					Name = Att . Name ,
-					Author = Att . Author ,
-					Introduction = Att . Introduction ,
-					ID = Att . ID ,
-					Demand = Att . Demand ,
-					Start = async ( ) => { await LoadingMod . Start ( ); } ,
-					Stop = async ( ) => { await LoadingMod . Stop ( ); } ,
-				} );
+					IMod LoadingMod = Activator . CreateInstance ( typ , this ) as IMod;
+					ModAttribute Att = Attribute . GetCustomAttribute ( typ , typeof ( ModAttribute ) ) as ModAttribute;
+					CollectionOfMod . Add ( new LoadedMod
+					{
+						Name = Att . Name ,
+						Author = Att . Author ,
+						Introduction = Att . Introduction ,
+						ID = Att . Id ,
+						Demand = Att . Demand ,
+						Start = async ( ) => { await LoadingMod . Start ( ); } ,
+						Stop = async ( ) => { await LoadingMod . Stop ( ); } ,
+					} );
+				}
 			}
 		}
 
 		public Core ( List<string> modfiles )
 		{
-			ListOfMod = new List<LoadedMod> ( );
+			CollectionOfMod = new Collection<LoadedMod> ( );
 
 			ModFiles = modfiles;
 
@@ -69,15 +73,15 @@ namespace OrangeEndless
 
 		public async void Start ( )
 		{
-			foreach ( var item in ListOfMod )
+			foreach ( var item in CollectionOfMod )
 			{
 				await item . Start ( );
 			}
 		}
 
-		public async void Stop ( DateTime Deadline )
+		public async void Stop ()
 		{
-			foreach ( var item in ListOfMod )
+			foreach ( var item in CollectionOfMod )
 			{
 				await item . Stop ( );
 			}

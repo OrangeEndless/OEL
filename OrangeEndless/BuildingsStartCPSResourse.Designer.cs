@@ -22,7 +22,7 @@ namespace OrangeEndless {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class BuildingsStartCPSResourse {
+    public class BuildingsStartCPSResourse {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace OrangeEndless {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OrangeEndless.BuildingsStartCPSResourse", typeof(BuildingsStartCPSResourse).Assembly);
@@ -51,7 +51,7 @@ namespace OrangeEndless {
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 0.1 的本地化字符串。
         /// </summary>
-        internal static string R1 {
+        public static string R1 {
             get {
                 return ResourceManager.GetString("R1", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 1000000 的本地化字符串。
         /// </summary>
-        internal static string R10 {
+        public static string R10 {
             get {
                 return ResourceManager.GetString("R10", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 100000000 的本地化字符串。
         /// </summary>
-        internal static string R11 {
+        public static string R11 {
             get {
                 return ResourceManager.GetString("R11", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 0.5 的本地化字符串。
         /// </summary>
-        internal static string R2 {
+        public static string R2 {
             get {
                 return ResourceManager.GetString("R2", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 4 的本地化字符串。
         /// </summary>
-        internal static string R3 {
+        public static string R3 {
             get {
                 return ResourceManager.GetString("R3", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 10 的本地化字符串。
         /// </summary>
-        internal static string R4 {
+        public static string R4 {
             get {
                 return ResourceManager.GetString("R4", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 40 的本地化字符串。
         /// </summary>
-        internal static string R5 {
+        public static string R5 {
             get {
                 return ResourceManager.GetString("R5", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 100 的本地化字符串。
         /// </summary>
-        internal static string R6 {
+        public static string R6 {
             get {
                 return ResourceManager.GetString("R6", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 400 的本地化字符串。
         /// </summary>
-        internal static string R7 {
+        public static string R7 {
             get {
                 return ResourceManager.GetString("R7", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 6000 的本地化字符串。
         /// </summary>
-        internal static string R8 {
+        public static string R8 {
             get {
                 return ResourceManager.GetString("R8", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace OrangeEndless {
         /// <summary>
         ///   查找类似 100000 的本地化字符串。
         /// </summary>
-        internal static string R9 {
+        public static string R9 {
             get {
                 return ResourceManager.GetString("R9", resourceCulture);
             }

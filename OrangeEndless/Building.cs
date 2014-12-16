@@ -8,7 +8,7 @@ namespace OrangeEndless
 {
 	public class Building
 	{
-		public decimal StartCPS { get; set; }
+		public decimal StartCps { get; set; }
 
 		public decimal StartPrice { get; set; }
 
@@ -20,11 +20,11 @@ namespace OrangeEndless
 			}
 		}
 
-		public decimal CPS
+		public decimal Cps
 		{
 			get
 			{
-				return StartCPS * Number * Convert . ToDecimal ( Math . Pow ( 2 , Level ) );
+				return StartCps * Number * Convert . ToDecimal ( Math . Pow ( 2 , Level ) );
 			}
 		}
 
@@ -49,7 +49,7 @@ namespace OrangeEndless
 
 				Name = await Task . Run<string> ( ( ) => { return BuildingsNameResource . ResourceManager . GetString ( ID ); } ) ,
 				Introduction = await Task . Run<string> ( ( ) => { return BuildingsIntroductionResourse . ResourceManager . GetString ( ID ); } ) ,
-				StartCPS = await Task . Run<decimal> ( ( ) => { return Convert . ToDecimal ( BuildingsStartCPSResourse . ResourceManager . GetString ( ID ) ); } ) ,
+				StartCps = await Task . Run<decimal> ( ( ) => { return Convert . ToDecimal ( BuildingsStartCPSResourse . ResourceManager . GetString ( ID ) ); } ) ,
 				StartPrice = await Task . Run<decimal> ( ( ) => { return Convert . ToDecimal ( BuildingsStartPriceResourse . ResourceManager . GetString ( ID ) ); } ) ,
 
 			};

@@ -5,14 +5,15 @@ using System . Text;
 using System . Reflection;
 using System . Threading;
 using System . Threading . Tasks;
+using System . Collections . ObjectModel;
 
 namespace OrangeEndless
 {
-	public interface Mod
+	public interface IMod
 	{
 		Task Start ( );
 
-		Task Stop (  );
+		Task Stop ( );
 
 
 	}
@@ -20,18 +21,18 @@ namespace OrangeEndless
 
 	public struct LoadedMod
 	{
-		public Func<Task> Start;
+		public Func<Task> Start { get; set; }
 
-		public Func< Task> Stop;
+		public Func<Task> Stop { get; set; }
 
-		public string Name;
+		public string Name { get; set; }
 
-		public string Author;
+		public string Author { get; set; }
 
-		public string Introduction;
+		public string Introduction { get; set; }
 
-		public Guid ID;
+		public Guid ID { get; set; }
 
-		public List<Guid> Demand;
+		public Collection<Guid> Demand { get; set; }
 	}
 }
