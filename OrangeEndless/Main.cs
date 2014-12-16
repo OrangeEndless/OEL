@@ -13,8 +13,6 @@ namespace OrangeEndless
 	[OrangeEndless . Mod ( "Core" , "Wencey Wang" , "The Core Function For OrangeEndLess" , "00000001-0000-0000-0000-000000000001" , new string [ ] { } )]
 	public class Main : OrangeEndless . IMod
 	{
-		Core Core;
-
 		public Timer Ticks;
 
 		public decimal NumberOfOrange { get; set; }
@@ -54,9 +52,7 @@ namespace OrangeEndless
 		}
 
 		public Main (  Core core )
-		{
-			Core = core;
-			
+		{			
 			Ticks = new Timer ( 1000 );
 			Ticks . AutoReset = true;
 			Ticks . Enabled = true;
