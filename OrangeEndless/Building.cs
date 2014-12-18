@@ -3,20 +3,35 @@ using System . Collections . Generic;
 using System . Linq;
 using System . Text;
 using System . Threading . Tasks;
+using System . Globalization;
 
 namespace OrangeEndless
 {
 	public class Building
 	{
-		public decimal StartCps { get; set; }
+		private decimal startcps;
 
-		public decimal StartPrice { get; set; }
+		public decimal StartCps
+		{
+			get { return startcps; }
+			set { startcps = decimal . Ceiling ( value ); }
+		}
+
+
+		private decimal starprice;
+
+		public decimal StartPrice
+		{
+			get { return starprice; }
+			set { starprice = decimal . Ceiling ( value ); }
+		}
+
 
 		public decimal Price
 		{
 			get
 			{
-				return StartPrice * Convert . ToDecimal ( Math . Pow ( 1.15 , Number ) );
+				return decimal . Ceiling ( StartPrice * Convert . ToDecimal ( Math . Pow ( 1.15 , ( double ) Number ) ) );
 			}
 		}
 
@@ -24,35 +39,59 @@ namespace OrangeEndless
 		{
 			get
 			{
-				return StartCps * Number * Convert . ToDecimal ( Math . Pow ( 2 , Level ) );
+				return decimal . Ceiling ( StartCps * Number * Convert . ToDecimal ( Math . Pow ( 2 , ( double ) Level ) ) );
 			}
 		}
 
-		public long Number { get; set; }
+		private decimal number;
 
-		public long Level { get; set; }
+		public decimal Number
+		{
+			get { return number; }
+			set { number = decimal . Ceiling ( value ); }
+		}
+
+		private decimal level;
+
+		public decimal Level
+		{
+			get { return level; }
+			set { level = decimal . Ceiling ( value ); }
+		}
 
 		public string Name { get; set; }
 
 		public string Introduction { get; set; }
 
+		public string Id { get; set; }
+
 		public async Task Suspend ( )
 		{
-
+			await Task . Run ( ( ) =>
+			{
+				Properties . Settings . Default [ Id + "Level" ] = Level;
+				Properties . Settings . Default [ Id + "Number" ] = Number;
+			} );
 		}
 
 		public async static Task<Building> LoadBuilding ( int key )
 		{
-			string ID = "R" + key . ToString ( );
-			return new Building
+			return await Task . Run ( ( ) =>
 			{
-
-				Name = await Task . Run<string> ( ( ) => { return BuildingsNameResource . ResourceManager . GetString ( ID ); } ) ,
-				Introduction = await Task . Run<string> ( ( ) => { return BuildingsIntroductionResourse . ResourceManager . GetString ( ID ); } ) ,
-				StartCps = await Task . Run<decimal> ( ( ) => { return Convert . ToDecimal ( BuildingsStartCpsResourse . ResourceManager . GetString ( ID ) ); } ) ,
-				StartPrice = await Task . Run<decimal> ( ( ) => { return Convert . ToDecimal ( BuildingsStartPriceResourse . ResourceManager . GetString ( ID ) ); } ) ,
-
-			};
+				string id = key . ToString ( CultureInfo . InvariantCulture );
+				var Temp = new Building
+				{
+					Name = BuildingsNameResource . ResourceManager . GetString ( "R" + id , CultureInfo . InvariantCulture ) ,
+					Introduction = BuildingsIntroductionResourse . ResourceManager . GetString ( "R" + id , CultureInfo . InvariantCulture ) ,
+					StartCps = Convert . ToDecimal ( BuildingsStartCpsResourse . ResourceManager . GetString ( "R" + id , CultureInfo . InvariantCulture ) , CultureInfo . InvariantCulture ) ,
+					StartPrice = Convert . ToDecimal ( BuildingsStartPriceResourse . ResourceManager . GetString ( "R" + id , CultureInfo . InvariantCulture ) , CultureInfo . InvariantCulture ) ,
+					Level = ( decimal ) ( Properties . Settings . Default [ id + "Level" ] ?? ( object ) 0d ) ,
+					Number = ( decimal ) ( Properties . Settings . Default [ id + "Number" ] ?? ( object ) 0d ) ,
+					Id = id
+				};
+				return Temp;
+			}
+			);
 		}
 
 	}

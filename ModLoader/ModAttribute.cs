@@ -6,19 +6,18 @@ using System . Collections . ObjectModel;
 
 namespace OrangeEndless
 {
-	[AttributeUsage(AttributeTargets.Class)]
+	[AttributeUsage ( AttributeTargets . Class )]
 	sealed public class ModAttribute : Attribute
 	{
-		public string Name { get; set; }
+		public string Name { get; private set; }
 
-		public string Author { get; set; }
+		public string Author { get; private set; }
 
-		public string Introduction { get; set; }
+		public string Introduction { get; private set; }
 
-		public Guid Id { get; set; }
+		public Guid Id { get; private set; }
 
-		public Collection<Guid> Demand { get; set; }
-
+		public Collection<Guid> Demand { get; private set; }
 
 		public ModAttribute ( string name , string author , string introduction , string id , string [ ] demend )
 		{

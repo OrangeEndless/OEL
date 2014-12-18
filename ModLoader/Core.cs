@@ -14,10 +14,9 @@ namespace OrangeEndless
 {
 	public class Core
 	{
+		public Collection<LoadedMod> CollectionOfMod { get; private set; }
 
-		public Collection<LoadedMod> CollectionOfMod;
-
-		List<string> ModFiles;
+		Collection<string> ModFiles;
 
 		public async Task<List<Type>> GetModList ( )
 		{
@@ -47,8 +46,10 @@ namespace OrangeEndless
 			{
 				foreach ( var typ in modtoload )
 				{
-					IMod LoadingMod = Activator . CreateInstance ( typ , this ) as IMod;
+					//todo:lots
 					ModAttribute Att = Attribute . GetCustomAttribute ( typ , typeof ( ModAttribute ) ) as ModAttribute;
+					IMod LoadingMod = Activator . CreateInstance ( typ , this  ) as IMod;
+
 					CollectionOfMod . Add ( new LoadedMod
 					{
 						Name = Att . Name ,
@@ -63,11 +64,13 @@ namespace OrangeEndless
 			}
 		}
 
-		public Core ( List<string> modfiles )
+		public Core ( Collection<string> modfiles , DirectoryInfo datadirectory )
 		{
 			CollectionOfMod = new Collection<LoadedMod> ( );
 
 			ModFiles = modfiles;
+
+
 
 		}
 
@@ -79,7 +82,7 @@ namespace OrangeEndless
 			}
 		}
 
-		public async void Stop ()
+		public async void Stop ( )
 		{
 			foreach ( var item in CollectionOfMod )
 			{

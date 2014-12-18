@@ -1,4 +1,5 @@
 ﻿using System;
+using System . IO;
 using System . Collections . Generic;
 using System . Linq;
 using System . Text;
@@ -7,19 +8,32 @@ using System . Threading . Tasks;
 using System . Runtime . CompilerServices;
 using System . Timers;
 using System . Collections . ObjectModel;
+using OrangeEndless . Properties;
 
 namespace OrangeEndless
 {
-	[OrangeEndless . Mod ( "Core" , "Wencey Wang" , "The Core Function For OrangeEndLess" , "00000001-0000-0000-0000-000000000001" , new string [ ] { } )]
-	public class Main : OrangeEndless . IMod
+	[OrangeEndless . Mod ( "OrangeEndless" , "Wencey Wang" , "The Core Function For OrangeEndLess" , @"{00000001-0000-0000-0000-000000000001}" , new string [ ] { } )]
+	public class OrangeEndlessCore : OrangeEndless . IMod
 	{
-		public Timer Ticks;
+		Timer Ticks;
 
-		public decimal NumberOfOrange { get; set; }
+		private decimal numberoforange;
 
-		public decimal NumberOfMoney { get; set; }
+		public decimal NumberOfOrange
+		{
+			get { return numberoforange; }
+			set { numberoforange = decimal . Ceiling ( value ); }
+		}
 
-		public Collection<Building> ListOfBuilding;
+		private decimal numberofmoney;
+
+		public decimal NumberOfMoney
+		{
+			get { return numberofmoney; }
+			set { numberofmoney = decimal . Ceiling ( value ); }
+		}
+
+		public Collection<Building> ListOfBuilding { get; private set; }
 
 		public async Task Start ( )
 		{
@@ -28,14 +42,17 @@ namespace OrangeEndless
 				var building = await Building . LoadBuilding ( i );
 				ListOfBuilding . Add ( building );
 			}
+			Ticks . Start ( );
 		}
 
 		public async Task Suspend ( )
 		{
+			Ticks . Stop ( );
 			foreach ( var item in ListOfBuilding )
 			{
 				await item . Suspend ( );
 			}
+			Settings . Default . Save ( );
 		}
 
 		public async void Tick ( object sender , ElapsedEventArgs e )
@@ -51,13 +68,18 @@ namespace OrangeEndless
 			await Task . Run ( ( ) => { } );
 		}
 
-		public Main (  Core core )
-		{			
+		public async void BuyBuildings ( int index , decimal number )
+		{
+			await Task . Run ( ( ) => { } );
+		}
+
+		[System . Diagnostics . CodeAnalysis . SuppressMessage ( "Microsoft.Usage" , "CA1801:ReviewUnusedParameters" , MessageId = "core" )]
+		public OrangeEndlessCore ( Core core )
+		{
 			Ticks = new Timer ( 1000 );
 			Ticks . AutoReset = true;
 			Ticks . Enabled = true;
 			Ticks . Elapsed += Tick;
-
 		}
 
 	}
