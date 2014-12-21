@@ -78,11 +78,20 @@ namespace OrangeEndless
 		{
 			foreach ( var item in CollectionOfMod )
 			{
+				try
+				{
 				await item . Start ( );
+
+				}
+				catch ( Exception )
+				{
+					
+					throw;
+				}
 			}
 		}
 
-		public async void Stop ( )
+		public async void Suspend ( )
 		{
 			foreach ( var item in CollectionOfMod )
 			{

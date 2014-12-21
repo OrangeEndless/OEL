@@ -15,7 +15,6 @@ namespace OrangeEndless
 
 		Task Suspend ( );
 
-
 	}
 
 
@@ -33,6 +32,6 @@ namespace OrangeEndless
 
 		public Guid Id { get; set; }
 
-		public Collection<Guid> Demand { get;set; }
+		public Collection<Guid> Demand { get; set; }
 	}
 }
