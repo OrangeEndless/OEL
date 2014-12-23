@@ -9,29 +9,29 @@ using System . Collections . ObjectModel;
 
 namespace OrangeEndless
 {
-	public interface IMod
-	{
-		Task Start ( );
+    public interface IMod
+    {
+        Task Start ( );
 
-		Task Suspend ( );
+        Task Suspend ( );
 
-	}
+    }
 
 
-	public class LoadedMod
-	{
-		public Func<Task> Start { get; set; }
+    public class LoadedMod
+    {
+        public Func<Task> Start { get; set; }
 
-		public Func<Task> Suspend { get; set; }
+        public Func<Task> Suspend { get; set; }
 
-		public string Name { get; set; }
+        public string Name { get; set; }
 
-		public string Author { get; set; }
+        public string Author { get; set; }
 
-		public string Introduction { get; set; }
+        public string Introduction { get; set; }
 
-		public Guid Id { get; set; }
+        public Guid Id { get; set; }
 
-		public Collection<Guid> Demand { get; set; }
-	}
+        public Collection<Guid> Demand { get; set; }
+    }
 }

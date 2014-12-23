@@ -96,20 +96,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building.cs" />
-    <Compile Include="BuildingsIntroductionResourse.Designer.cs">
+    <Compile Include="BuildingsIntroductionResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BuildingsIntroductionResourse.resx</DependentUpon>
+      <DependentUpon>BuildingsIntroductionResource.resx</DependentUpon>
     </Compile>
     <Compile Include="BuildingsNameResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BuildingsNameResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="BuildingsStartCpsResourse1.Designer.cs">
+    <Compile Include="BuildingsStartCpsResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BuildingsStartCpsResourse.resx</DependentUpon>
+      <DependentUpon>BuildingsStartCpsResource.resx</DependentUpon>
     </Compile>
     <Compile Include="BuildingsStartPriceResourse.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -124,6 +124,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Technology.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ModLoader\ModLoader.csproj">
@@ -132,23 +133,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BuildingsIntroductionResourse.resx">
+    <EmbeddedResource Include="BuildingsIntroductionResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>BuildingsIntroductionResourse.Designer.cs</LastGenOutput>
+      <LastGenOutput>BuildingsIntroductionResource.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BuildingsNameResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>BuildingsNameResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuildingsStartCpsResourse.resx">
+    <EmbeddedResource Include="BuildingsStartCpsResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>BuildingsStartCpsResourse1.Designer.cs</LastGenOutput>
+      <LastGenOutput>BuildingsStartCpsResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="BuildingsStartPriceResourse.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>BuildingsStartPriceResourse.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="TechnologyNameResource.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
